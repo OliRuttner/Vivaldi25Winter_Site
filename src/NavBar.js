@@ -14,19 +14,20 @@ const Navbar = () => {
         <img src={require("./logo.png")} alt="Logo" className="logo" />
       </a>
       <div className="links">
-        <Link className="btn" to="/">Home</Link>
-        <a 
-        href="https://www.best.eu.org/courses/frequentlyAskedQuestions.jsp" className="btn"
+        <Link to="/" className="button">Home</Link>
+        <a
+          href="https://www.best.eu.org/courses/frequentlyAskedQuestions.jsp" target="_blank"
+          className="button"
         >
           FAQ
           </a>
         <a
-          href="https://www.best.eu.org/courses/howToWriteAMotivationLetter.jsp"
-          className="btn"
+          href="https://www.best.eu.org/courses/howToWriteAMotivationLetter.jsp" target="_blank"
+          className="button"
         >
           How to Write a Motivation Letter
         </a>
-        <Link className="btn" to="/testimonials">Testimonials</Link>
+        <Link to="/testimonials" className="button">Testimonials</Link>
       </div>
       
       <div className="mobile-menu">
@@ -47,7 +48,7 @@ const Navbar = () => {
             <li>
               <a 
                 href="https://www.best.eu.org/courses/frequentlyAskedQuestions.jsp"
-                onClick={toggleMenu}
+                onClick={toggleMenu} target="_blank"
               >
                 FAQ
               </a>
@@ -55,7 +56,7 @@ const Navbar = () => {
             <li>
               <a
                 href="https://www.best.eu.org/courses/howToWriteAMotivationLetter.jsp"
-                onClick={toggleMenu}
+                onClick={toggleMenu} target="_blank"
               >
                 How to Write a Motivation Letter
               </a>
