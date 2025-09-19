@@ -7,10 +7,16 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
+  const scrollToTestimonials = () => {
+    const testimonialsSection = document.getElementById("testimonials");
+    if (testimonialsSection) {
+      testimonialsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="navbar">
-      <a href="https://www.best.eu.org/courses/welcome.jsp">
+      <a href="https://www.best.eu.org/courses/welcome.jsp" target="_blank" rel="noopener noreferrer">
         <img src={require("./logo.png")} alt="Logo" className="logo" />
       </a>
       <div className="links">
@@ -27,7 +33,7 @@ const Navbar = () => {
         >
           How to Write a Motivation Letter
         </a>
-        <Link to="/testimonials" className="button">Testimonials</Link>
+        <button onClick={scrollToTestimonials} className="button">Testimonials</button>
       </div>
       
       <div className="mobile-menu">
@@ -61,7 +67,7 @@ const Navbar = () => {
                 How to Write a Motivation Letter
               </a>
             </li>
-            <li><Link to="/testimonials" onClick={toggleMenu}>Testimonials</Link></li>
+            <li><Link to="#" onClick={() => { scrollToTestimonials(); toggleMenu(); }}>Testimonials</Link></li>
           </ul>
         </div>
       </div>

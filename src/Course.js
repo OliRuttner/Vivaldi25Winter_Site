@@ -14,7 +14,7 @@ const Course = () => {
             <h2>{course.title}</h2>
             <p>Place: {course.location} <br /> Dates: {course.dates} </p>
                         <Link
-                            className='btn'
+                            className='button'
                             to={{pathname: `/courses/nailing-it-woodworking-in-the-alps`}}
                         >
                             Learn more!
