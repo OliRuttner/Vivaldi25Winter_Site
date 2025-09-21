@@ -33,7 +33,7 @@ const [index, setIndex] = useState(0);
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <div className="testimonials-section">
+    <div className="testimonials-section" id="testimonials">
         <h2>Testimonials</h2>
         <div className="testimonial-carousel">
         <div className="testimonial">
