@@ -104,6 +104,9 @@ html {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.button:hover {
+  background-color: hsl(232, 36%, 32%);
+}
 .course{
   text-align: center;
   margin-top: auto;
@@ -115,7 +118,7 @@ html {
   border-radius: 10px;
   border: solid;
   border-color: #5864B0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px hsl(232, 36%, 72%);
   padding: 10px 10px;
 }
 .slideshow-image{
@@ -170,18 +173,6 @@ html {
 .apply a{
   margin-top: 10px;
 }
-.testimonials{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
-  gap: 20px;
-}
-.testimonials h2{
-  font-size: calc(1.5vw + 1rem);
-  text-align: center;
-}
-
 .faq{
   display: flex;
   flex-direction: column;
@@ -209,11 +200,88 @@ html {
 .mobile-menu{
   display: none;
 }
-/* Responsive styles */
+.testimonial img{
+  width: 150px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: #5864B0 solid 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.testimonials-section h2{
+  margin: 20px;
+  font-weight: 800;
+  text-align: center;
+  font-size: calc(1vw + 1.2rem);
+}
+.testimonials-section h4{
+  padding: 10px;
+  color: #5864B0;
+  font-weight: 600;
+  text-align: center;
+  font-size: calc(0.5vw + 1rem);
+}
+.testimonial {
+  gap: 10px;
+  margin: 20px auto;
+}
+.testimonial-carousel {
+  position: relative;
+  border: #5864B0 solid 3px;
+  width: 100%;
+  max-width: min(800px, 85vw);
+  margin: auto;
+  text-align: center;
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 12px;
+  padding: 20px 50px;
+  box-shadow: 0 4px 8px hsl(232, 36%, 72%);
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin: 10px;
+}
+
+.testimonial h4 {
+  font-weight: bold;
+  color: #5864B0;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(232, 36%, 52%);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button.prev { left: 8px; }
+button.next { right: 8px; }
+
+button:hover {
+  background: hsl(232, 36%, 32%);
+}
+
 @media (max-width: 1200px) {
   * {
     margin: 0 auto;
   }
+  .testimonial-carousel {
+    padding: 20px 30px;
+    max-width: min(75vw, 600px);
+  }
+  .testimonial p {
+    padding: 0 10px;
+    }
   .course {
     flex-direction: column;
     text-align: center;
@@ -298,11 +366,16 @@ html {
     position: relative;
     cursor: pointer;
     z-index: 1001;
+    background-color: hsl(0, 0%, 90%);
+    gap: 10px;
+    border-radius: 10px;
+    padding: 0 20px;
+    border: #5864B0 solid 4px;
   }
 
   .ham-menu span {
     height: 5px;
-    width: 100%;
+    width: 80%;
     background-color: black;
     position: absolute;
     left: 50%;
