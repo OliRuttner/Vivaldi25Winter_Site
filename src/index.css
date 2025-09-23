@@ -308,7 +308,7 @@ button:hover {
 }
   .testimonial-carousel {
     padding: 20px 30px;
-    max-width: min(75vw, 600px);
+    max-width: min(85vw, 600px);
   }
   .testimonial p {
     padding: 0 10px;
