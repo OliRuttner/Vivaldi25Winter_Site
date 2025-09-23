@@ -35,7 +35,7 @@ const Navbar = () => {
         >
           How to Write a Motivational Letter
         </a>
-        {/* <Link to="/" onClick={scrollToTestimonials} className="button">Testimonials</Link> */}
+        { <Link to="/" onClick={scrollToTestimonials} className="button">Testimonials</Link> }
       </div>
       
       <div className="mobile-menu">
@@ -69,7 +69,7 @@ const Navbar = () => {
                 How to Write a Motivation Letter
               </a>
             </li>
-            {/* <li><Link to="/" onClick={() => { scrollToTestimonials(); toggleMenu(); }}>Testimonials</Link></li> */}
+            {<li><Link to="/" onClick={() => { scrollToTestimonials(); toggleMenu(); }}>Testimonials</Link></li>}
           </ul>
         </div>
       </div>
