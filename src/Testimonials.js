@@ -47,31 +47,40 @@ const testimonials = [
 const Testimonials = () => {
 
 const [index, setIndex] = useState(0);
-  // Auto-play every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
+const [isPaused, setIsPaused] = useState(false);
 
-  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
-  const prev = () =>
+// Auto-play every 5 seconds
+useEffect(() => {
+  if (isPaused) return;
+
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % testimonials.length);
+  }, 15000);
+
+  return () => clearInterval(interval);
+}, [isPaused]);
+
+const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+const prev = () =>
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+const togglePause = () => setIsPaused((prev) => !prev);
 
   return (
     <div className="testimonials-section" id="testimonials">
-        <h2>Testimonials</h2>
-        <div className="testimonial-carousel">
+      <h2 className="testimonials-title">Testimonials</h2>
+      <div className="testimonial-carousel">
         <div className="testimonial">
-          <p dangerouslySetInnerHTML={{ __html: testimonials[index].text }}></p>
-          <h4>{testimonials[index].author}</h4>
-          <img src={testimonials[index].picture} alt={testimonials[index].author} />
+          <p className="testimonial-text" dangerouslySetInnerHTML={{ __html: testimonials[index].text }}></p>
+          <h4 className="testimonial-author">{testimonials[index].author}</h4>
+          <img className="testimonial-image" src={testimonials[index].picture} alt={testimonials[index].author} />
         </div>
 
-        <button className="prev" onClick={prev}>❮</button>
-        <button className="next" onClick={next}>❯</button>
+        <div className="testimonial-buttons">
+          <button className="prev" onClick={prev}>❮</button>
+          <button className="next" onClick={next}>❯</button>
+          <button className="pause" onClick={togglePause}>{isPaused ? 'Resume' : 'Pause'}</button>
         </div>
+      </div>
     </div>
   );
 }
