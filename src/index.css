@@ -295,6 +295,9 @@ button:hover {
   * {
     margin: 0 auto;
   }
+  .testimonial img{
+    width: min(45vw, 200px);
+  }
   .navbar .logo:first-child {
     zoom: 1.1;
   }
