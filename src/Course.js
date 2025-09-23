@@ -12,7 +12,7 @@ const Course = () => {
     return ( <div className="course">
         <div className="course-info">
             <h2>{course.title}</h2>
-            <p>Place: {course.location} <br /> Dates: {course.dates} </p>
+            <p>Location: {course.location} <br /> Dates: {course.dates} </p>
                         <Link
                             className='button'
                             to={{pathname: `/courses/nailing-it-woodworking-in-the-alps`}}
