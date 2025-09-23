@@ -323,7 +323,10 @@ button:hover {
     display: none;
   }
   .navbar .logo {
-    max-height: 50px;
+    max-height: 60px;
+  }
+  .navbar .logo:first-child {
+    margin-left: -40px;
   }
   .footer {
     position: relative;
