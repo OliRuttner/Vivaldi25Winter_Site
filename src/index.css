@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-html {
+html, body {
+  height: 100%;
+  background: url('bg.png');
+  background-size: 150px;
+  background-repeat: repeat;
   scroll-behavior: smooth;
 }
 *{
@@ -11,10 +15,9 @@ html {
   font-family: 'League Spartan', sans-serif;
   color:hsl(232, 70%, 35%)
 }
-.home{
+.home { 
   display: flex;
   flex-direction: column;
-  min-width: fit-content;
   position: relative;
   padding-bottom: 30px;
   padding-top: 30px;
@@ -34,13 +37,10 @@ html {
   box-sizing: border-box;
   position: relative;
   bottom: 0;
-  background: url('bg.png');
-  background-size: 150px;
-  background-repeat: repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap:15px;
+  gap: 15px;
 }
 .footer h3{
   font-size: calc(0.5vw + 1rem);
@@ -88,9 +88,13 @@ html {
   max-height: 80px;
 }
 .navbar .logo:first-child {
-  zoom: 1.3;
+  zoom: 1.2;
 }
-
+.navbar .logo:nth-child(2) {
+  margin-left: 45px;
+  transform: translateY(-55px);
+  zoom: 0.5;
+}
 .navbar .links {
   margin-left: auto;
   display: flex;
@@ -203,7 +207,7 @@ html {
   display: none;
 }
 .testimonial img{
-  width: 150px;
+  width: 250px;
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -277,6 +281,14 @@ button:hover {
   * {
     margin: 0 auto;
   }
+  .navbar .logo:first-child {
+    zoom: 1.1;
+  }
+  .navbar .logo:nth-child(2) {
+  transform: translateY(-28px);
+  margin: 0 40px;
+  zoom: 0.5;
+}
   .testimonial-carousel {
     padding: 20px 30px;
     max-width: min(75vw, 600px);
@@ -464,7 +476,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

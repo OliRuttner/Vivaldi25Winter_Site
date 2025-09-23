@@ -18,8 +18,8 @@ const Navbar = () => {
     <div className="navbar">
       <a href="https://www.best.eu.org/courses/welcome.jsp" target="_blank" rel="noopener noreferrer">
         {/* <img src={require("./logo.png")} alt="Logo" className="logo" /> */}
-        <img src={require("./BEST_signature.png")} alt="Logo" className="logo" />
-        <img src={require("./BESTCourses_Logo_Signature_Black.png")} alt="Logo" className="logo" />
+        <img src={require("./BESTCJ_signature_colour.png")} alt="Logo" className="logo" />
+        <img src={require("./BESTCourses_Logo_Signature_Colour.png")} alt="Logo" className="logo" />
       </a>
       <div className="links">
         <Link to="/" className="button">Home</Link>
