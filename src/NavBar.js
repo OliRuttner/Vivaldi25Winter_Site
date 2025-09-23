@@ -17,7 +17,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <a href="https://www.best.eu.org/courses/welcome.jsp" target="_blank" rel="noopener noreferrer">
-        <img src={require("./logo.png")} alt="Logo" className="logo" />
+        {/* <img src={require("./logo.png")} alt="Logo" className="logo" /> */}
+        <img src={require("./BEST_signature.png")} alt="Logo" className="logo" />
+        <img src={require("./BESTCourses_Logo_Signature_Black.png")} alt="Logo" className="logo" />
       </a>
       <div className="links">
         <Link to="/" className="button">Home</Link>
@@ -31,7 +33,7 @@ const Navbar = () => {
           href="https://www.best.eu.org/courses/howToWriteAMotivationLetter.jsp" target="_blank"
           className="button"
         >
-          How to Write a Motivation Letter
+          How to Write a Motivational Letter
         </a>
         <Link to="/" onClick={scrollToTestimonials} className="button">Testimonials</Link>
       </div>
