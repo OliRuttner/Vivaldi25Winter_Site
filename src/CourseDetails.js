@@ -23,7 +23,8 @@ const CourseDetails = () => {
                         Dates: 6 February - 14 February 2026 <br />
                         <a href='https://www.best.eu.org/courses/list.jsp?season=winter25'> Season: Winter Season 2025 </a><br />
                         <a href="https://bestgraz.org/">Organised by: BEST Group Graz </a><br />
-                        <a href="https://www.tugraz.at/en/">University: Graz University of Technology</a>
+                        <a href="https://www.tugraz.at/en/">University: Graz University of Technology</a><br />
+                        Price: 43.2 €
                     </p>
                 </div>
                 <div>
